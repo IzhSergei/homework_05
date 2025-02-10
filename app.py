@@ -3,7 +3,6 @@ from typing import List
 from pydantic import BaseModel
 from fastapi import FastAPI, Request
 from fastapi.templating import Jinja2Templates
-# from app import router as api_router
 
 
 
@@ -19,12 +18,6 @@ def index(request: Request):
 @app.get("/about/")
 def about(request: Request):
     return templates.TemplateResponse("about.html", {"request": request})
-
-# """Подключение API роутера"""
-# app.include_router(api_router)
-
-
-
 
 
 
@@ -84,5 +77,5 @@ def delete_car(car_id: int):
             return {"detail": "Car deleted"}
     raise HTTPException(status_code=404, detail="Car not found")
 
-
+app.include_router(router )
 
