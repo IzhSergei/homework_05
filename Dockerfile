@@ -22,4 +22,4 @@ COPY . .
 EXPOSE 8000
 
 # Запускаем команду для старта сервера Django
-CMD ["uvicorn", "app:app", "--reload"]
+CMD ["uvicorn app:app --reload"]
