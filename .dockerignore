@@ -1,0 +1,46 @@
+# Игнорируем скрытые файлы и директории
+.*
+!.gitignore
+!.dockerignore
+
+# Игнорируем виртуальные окружения и кэш Python
+venv/
+env/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.pyc
+*.pyo
+*.pyd
+*.db
+*.sqlite3
+
+# Игнорируем логи и временные файлы
+*.log
+*.tmp
+*.bak
+
+# Игнорируем директории с зависимостями и сборками
+node_modules/
+dist/
+build/
+*.egg-info/
+.eggs/
+
+# Игнорируем IDE-специфичные файлы
+.vscode/
+.idea/
+
+# Игнорируем тестовые данные и документацию
+tests/
+test/
+docs/
+coverage/
+htmlcov/
+.pytest_cache/
+
+# Игнорируем локальные настройки
+local_settings.py
+.env
+.env.local
