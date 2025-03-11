@@ -1,9 +1,9 @@
+import uvicorn
 from fastapi import APIRouter, HTTPException
 from typing import List
 from pydantic import BaseModel
 from fastapi import FastAPI, Request
 from fastapi.templating import Jinja2Templates
-
 
 
 app = FastAPI()
@@ -79,3 +79,5 @@ def delete_car(car_id: int):
 
 app.include_router(router )
 
+if __name__ == "__main__":
+    uvicorn.run("app:app", reload=True)
